@@ -1,0 +1,17 @@
+apiVersion: v1alpha1
+kind: Setting
+metadata:
+  name: discourse-plugin-settings
+spec:
+  forms:
+    - group: discourse
+      label: Discourse评论设置
+      formSchema:
+        - $formkit: textarea
+          label: Discourse嵌入代码
+          name: embedCode
+          rows: 10
+          help: |
+            请粘贴从Discourse管理面板获取的嵌入代码。
+            可以使用 {{POST_URL}} 作为当前文章URL的占位符。
+            可以使用 {{DOM_ID}} 作为评论区DOM ID的占位符。

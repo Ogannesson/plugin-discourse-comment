@@ -1,0 +1,8 @@
+apiVersion: plugin.halo.run/v1alpha1
+kind: Widget
+metadata:
+  name: discourse-comment-widget
+spec:
+  displayName: "Discourse评论组件"
+  className: run.halo.discourse.DiscourseCommentWidget
+  description: "将Discourse论坛的评论嵌入到Halo博客中"
