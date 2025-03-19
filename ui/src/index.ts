@@ -3,6 +3,9 @@ import SettingsView from "./views/SettingsView.vue";
 import { IconMessage } from "@halo-dev/components";
 import { markRaw } from "vue";
 
+// 显式标记 SettingsView 类型
+const settingsComponent = SettingsView as any;
+
 export default definePlugin({
   components: {},
   routes: [
@@ -11,7 +14,7 @@ export default definePlugin({
       route: {
         path: "/discourse-comments",
         name: "DiscourseComments",
-        component: SettingsView,
+        component: settingsComponent,
         meta: {
           title: "Discourse评论",
           searchable: true,

@@ -4,7 +4,7 @@ metadata:
   name: DiscourseCommentPlugin
 spec:
   enabled: true
-  requires: ">=2.20.0"
+  requires: ">=2.17.0"
   author:
     name: Oganneson
     website: https://github.com/Ogannesson/plugin-discourse-comment
@@ -17,4 +17,4 @@ spec:
   license:
     - name: "GPL-3.0"
       url: "https://github.com/halo-dev/plugin-starter/blob/main/LICENSE"
-  settingName: discourse-plugin-settings
+  settingName: discourse-comment

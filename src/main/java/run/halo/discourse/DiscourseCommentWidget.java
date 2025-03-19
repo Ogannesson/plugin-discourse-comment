@@ -43,8 +43,8 @@ public class DiscourseCommentWidget implements CommentWidget {
             return;
         }
 
-        // 获取设置
-        DiscourseSettings settings = settingFetcher.fetch("discourse", DiscourseSettings.class)
+        // 获取设置 - 注意这里使用新的设置组名称
+        DiscourseSettings settings = settingFetcher.fetch("discourse-comment", DiscourseSettings.class)
             .defaultIfEmpty(new DiscourseSettings())
             .block();
 
