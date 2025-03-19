@@ -12,7 +12,31 @@ spec:
           name: embedCode
           rows: 10
           value: ""
+          validation: required
           help: |
             请粘贴从Discourse管理面板获取的嵌入代码。
             可以使用 {{POST_URL}} 作为当前文章URL的占位符。
             可以使用 {{DOM_ID}} 作为评论区DOM ID的占位符。
+        
+        - $formkit: checkbox
+          name: enableOnPosts
+          label: 在文章中启用
+          value: true
+          help: 是否在所有文章页面自动启用Discourse评论
+        
+        - $formkit: select
+          name: position
+          label: 评论区位置
+          value: bottom
+          options:
+            - value: bottom
+              label: 文章底部
+            - value: after-content
+              label: 内容之后
+          help: 评论区在文章中的显示位置
+          
+        - $formkit: text
+          name: defaultDomId
+          label: 默认DOM ID
+          value: "discourse-comments"
+          help: 当无法获取特定ID时使用的默认DOM ID
